@@ -1,0 +1,54 @@
+@extends('layouts.app')
+
+@section('content')
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-white py-3">
+                        <h5 class="mb-0 fw-bold border-start border-4 border-primary ps-3">Tambah Kriteria</h5>
+                    </div>
+
+                    <div class="card-body p-4">
+                        <form method="POST" action="/kriteria">
+                            @csrf
+
+                            <div class="mb-3">
+                                <label class="form-label text-muted small fw-bold text-uppercase">Nama Kriteria</label>
+                                <input type="text" name="nama_kriteria" class="form-control" placeholder="Contoh: Kinerja"
+                                    required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label text-muted small fw-bold text-uppercase">Bobot</label>
+                                <input type="number" step="0.01" name="bobot" class="form-control" placeholder="Contoh: 0.4"
+                                    required>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label text-muted small fw-bold text-uppercase">Jenis Kriteria</label>
+                                <select name="jenis" class="form-select" required>
+                                    <option value="">-- Pilih Jenis --</option>
+                                    <option value="benefit">Benefit</option>
+                                    <option value="cost">Cost</option>
+                                </select>
+                            </div>
+
+                            <div class="d-flex justify-content-end gap-2">
+                                <a href="/kriteria" class="btn btn-light">
+                                    Batal
+                                </a>
+                                <button type="submit" class="btn btn-primary px-4">
+                                    Simpan Kriteria
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+@endsection
