@@ -158,7 +158,7 @@
 
     <!-- Sidebar -->
     <nav class="sidebar">
-        <a href="#" class="sidebar-brand">
+        <a href="/dashboard" class="sidebar-brand">
             <i class="bi bi-grid-1x2-fill"></i>
             SPK SAW
         </a>
